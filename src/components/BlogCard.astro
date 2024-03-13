@@ -1,9 +1,9 @@
----
-const {title, date, slug} = Astro.props
----
+  ---
+  const {title, blog="Blog", slug} = Astro.props
+  ---
 
-<a href = {`/blog/${slug}`} class="w-full">
-<article class="flex w-full flex-row items-center justify-between" >
-    <h3>{title}</h3>
-    <p>{date}</p>
-  </article>
+  <a href = {`/blog/${slug}`} class="w-full">
+  <article class="flex w-full flex-row items-center justify-between" >
+      <h3>{title}</h3>
+      <p>{blog}</p>
+    </article>

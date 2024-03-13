@@ -22,8 +22,7 @@ const blogs = (await getCollection('blog')).sort(
 	<!--<Header /> -->	
 		<main class="flex flex-col w-full gap-6 max-w-[600px]">
 			<NavBar></NavBar>
-<h1 class="text-6xl font-[monospace] tracking-tighter font-brush-script">hey i'm Rishi, designer, engineer & developer</h1>
-<BlogCard title="I have no Enemies" date="12-10-2024"/>
+<h1 class="text-6xl font-medium tracking-tighter font-brush-script">hey i'm Rishi, human :) engineer & developer</h1>	
   {
 		blogs.map((blog) => (
 			<BlogCard
@@ -34,6 +33,6 @@ const blogs = (await getCollection('blog')).sort(
 		))
   }
 		</main>
-	<!--<Footer /> -->	
+	<Footer /> 
 	</body>
 </html>

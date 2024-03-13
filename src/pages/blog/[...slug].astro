@@ -1,6 +1,7 @@
 ---
 import { type CollectionEntry, getCollection } from 'astro:content';
 import BlogPost from '../../layouts/BlogPost.astro';
+import Footer from '../../components/Footer.astro';
 
 export async function getStaticPaths() {
 	const posts = await getCollection('blog');
@@ -15,10 +16,10 @@ const post = Astro.props;
 const { Content } = await post.render();
 ---
 
-<div class=" bg-[#ff7b3e] flex flex-col items-center ">
+<div class=" bg-black flex flex-col items-center ">
 <!-- <h1>{post.data.title}</h1>
 	<h1>{post.data.description}</h1>-->	
-	<div class="prose prose-md prose-p:font-mono bg-[#f2d8cc] prose-headings:text-[#f04300] prose-a:text-white prose-p:text-black shadow-lg shadow-gray-500 p-10">
+	<div class="prose prose-md prose-p:font-mono bg-black prose-headings:text-white prose-ul:text-white prose-strong:text-white prose-a:text-blue-500 prose-p:text-white shadow-lg shadow-gray-500 p-10">
 		<Content/>
-	</div>
+	</div>	
 </div>
